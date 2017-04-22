@@ -50,7 +50,10 @@ defmodule Firmware.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   def deps do
-    [{:nerves, "~> 0.5.0", runtime: false}] ++
+    [
+      {:nerves, "~> 0.5.0", runtime: false},
+      {:frontend, in_umbrella: true},
+    ] ++
     deps(@target)
   end
 
